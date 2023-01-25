@@ -159,7 +159,7 @@ void PaintObject::ReadJson(IReadObjectContext* context, json_t& root)
                             PaintStructKey key;
                             key.FromJson(value);
 
-                            entry.Values.Add(key, std::make_shared<BoundBoxEntryValue>(entryValue));
+                            entry.Values.Add(key, entryValue);
                         }
 
                         std::string id;

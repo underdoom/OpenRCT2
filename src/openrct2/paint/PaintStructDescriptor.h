@@ -106,7 +106,7 @@ struct BoundBoxEntryValue
     BoundBoxXYZ Boundbox;
 };
 
-using BoundBoxTree = TreeContainer<PaintStructKey, std::shared_ptr<BoundBoxEntryValue>>;
+using BoundBoxTree = TreeContainer<PaintStructKey, BoundBoxEntryValue>;
 struct BoundBoxEntry
 {
     std::string Id;

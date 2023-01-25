@@ -193,9 +193,8 @@ void PaintStructDescriptor::Paint(
                     {
                         for (const auto& bb : *boundBoxes)
                         {
-                            auto Offset = bb->Coords;
-                            auto newOffset = Offset + CoordsXYZ{ 0, 0, height };
-                            auto newBoundBox = bb->Boundbox;
+                            auto newOffset = bb.Coords + CoordsXYZ{ 0, 0, height };
+                            auto newBoundBox = bb.Boundbox;
                             newBoundBox.offset.z += height;
 
                             if (type == PaintType::AddImageAsParent)
